@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -12,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@drawable/header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -44,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:text="Exchange Rate App"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -60,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:text="T.C.M.B Döviz Kurları"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold|italic" />
 
@@ -70,7 +72,7 @@
                     android:id="@+id/date"
                     android:layout_gravity="end"
                     android:text="Tarih"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="italic" />
 
@@ -110,200 +112,222 @@
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="170dp"
+        android:background="@drawable/out_layout_background"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/banka_background"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chose_btn">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/linearLayout"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:background="@drawable/banka_background"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="290dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Forex Buying"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="@android:color/black" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Forex Buying"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:id="@+id/banka_alis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/black" />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/in_layout_background"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="434dp">
 
-        <TextView
-            android:id="@+id/banka_alis"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Banknote Buying"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/sp_alis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="170dp"
+        android:background="@drawable/out_layout_background"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/banka_background"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chose_btn">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/linearlayout2"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:background="@drawable/banka_background"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:layout_editor_absoluteX="242dp"
+            tools:layout_editor_absoluteY="289dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Forex Selling"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="@android:color/black" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Forex Selling"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:id="@+id/banka_satis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/black" />
-
-        <TextView
-            android:id="@+id/banka_satis"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/btn_backgorund"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:background="@drawable/in_layout_background"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="434dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Banknote Selling"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="@android:color/black" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Banknote Buying"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:id="@+id/sp_satis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/black" />
-
-        <TextView
-            android:id="@+id/sp_alis"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/btn_backgorund"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Banknote Selling"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/black" />
-
-        <TextView
-            android:id="@+id/sp_satis"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
 
     </LinearLayout>
 
