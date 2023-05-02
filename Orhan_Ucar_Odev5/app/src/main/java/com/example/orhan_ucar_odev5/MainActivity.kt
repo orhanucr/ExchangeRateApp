@@ -8,6 +8,8 @@ import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,23 +28,18 @@ class MainActivity : AppCompatActivity() {
         spAlis = findViewById(R.id.sp_alis)
         spSatis = findViewById(R.id.sp_satis)
 
-        // XML sonuçlarını almak için XmlResult sınıfını kullanın
         val xml = XmlResult()
 
-        // İzinleri ayarlayın
         val policy = ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
 
-        // XmlResult sınıfındaki xmlCurrency fonksiyonunu kullanarak XML sonuçlarını alın
         val arr = xml.xmlCurrency()
 
-        // Popup menüyü oluşturun
         val popupMenu = PopupMenu(this, choseBtn)
         for (item in arr) {
             popupMenu.menu.add(item.Isim)
         }
 
-        // Popup menü öğeleri seçildiğinde ne yapılacağını tanımlayın
         popupMenu.setOnMenuItemClickListener { item ->
             val selectedCurrency = arr.find { it.Isim == item.title.toString() }
             selectedCurrency?.let { currency ->
@@ -51,11 +48,15 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-
-        // Popup menüyü göstermek için bir düğmeye tıklanırsa ne yapılacağını belirtin
         choseBtn.setOnClickListener {
             popupMenu.show()
         }
+
+        val tarihElemani = findViewById<TextView>(R.id.date)
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val tarih = Date()
+        tarihElemani.text = dateFormat.format(tarih)
+
     }
 
     private fun setCurrencyValues(item: Currency) {
