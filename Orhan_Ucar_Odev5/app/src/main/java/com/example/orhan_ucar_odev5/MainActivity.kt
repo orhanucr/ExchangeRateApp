@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bankaSatis: TextView
     private lateinit var spAlis: TextView
     private lateinit var spSatis: TextView
+    private lateinit var secilenAdi: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         bankaSatis = findViewById(R.id.banka_satis)
         spAlis = findViewById(R.id.sp_alis)
         spSatis = findViewById(R.id.sp_satis)
+        secilenAdi = findViewById(R.id.secilen_adi)
 
         val xml = XmlResult()
 
@@ -44,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             val selectedCurrency = arr.find { it.Isim == item.title.toString() }
             selectedCurrency?.let { currency ->
                 setCurrencyValues(currency)
+                secilenAdi.text = currency.Isim
             }
             true
         }
