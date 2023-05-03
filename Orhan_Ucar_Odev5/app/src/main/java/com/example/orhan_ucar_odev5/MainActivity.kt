@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy
-import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
