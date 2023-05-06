@@ -1,7 +1,7 @@
 # ExchangeRateApp
 
 
-<h1>Jsoup ile Merkez Bankası Döviz Kuru Bilgilerini Alma </h1>
+<h2>Jsoup ile Merkez Bankası Döviz Kuru Bilgilerini Alma </h2>
 <p>Bu projede, Jsoup kullanılarak Merkez bankasından günlük güncel döviz kurlarının bilgileri alınıp kullanıcıya gösterilmektedir.</p>
 
 <h2>Kullanılan Bağımlılıklar</h2>
