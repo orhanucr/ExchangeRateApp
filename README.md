@@ -1,4 +1,4 @@
-# ExchangeRateApp
+# Exchange Rate App
 
 
 <h2>Jsoup ile Merkez Bankası Döviz Kuru Bilgilerini Alma </h2>
