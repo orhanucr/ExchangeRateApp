@@ -2,7 +2,7 @@
 
 
 <h2>Jsoup ile Merkez Bankası Döviz Kuru Bilgilerini Alma </h2>
-<p>Bu projede, Jsoup kullanılarak Merkez bankasından günlük güncel döviz kurlarının bilgileri alınıp kullanıcıya gösterilmektedir. Veriler Jsoup yapısı ile alınmıştır ve her gün güncellenmektedir. Listeden seçilen para biriminin ilgili tüm alış-satış fiyatı ekranda gösterilmektedir.</p>
+<p>Bu projede, Jsoup kullanılarak Merkez bankasından günlük güncel döviz kurlarının bilgileri alınıp kullanıcıya gösterilmektedir. Veriler Jsoup yapısı ile alınmıştır ve her gün güncellenmektedir. Listeden seçilen para biriminin ilgili tüm alış-satış fiyatı ekranda gösterilmektedir. </p>
 
 <h2>Kullanılan Bağımlılıklar</h2>
 <pre><code>implementation 'org.jsoup:jsoup:1.16.1'</code></pre>
